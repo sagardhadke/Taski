@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
@@ -16,7 +17,12 @@ class _MyLoginState extends State<MyLogin> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome Back Let's Login"),
+            Text(
+              "Welcome Back Let's Login",
+              style: GoogleFonts.inter(
+                  textStyle:
+                      TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            ),
           ],
         ),
       ),
