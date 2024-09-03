@@ -11,25 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         home: MySplashScreen());
-  }
-}
-
-class MyTask extends StatefulWidget {
-  const MyTask({super.key});
-
-  @override
-  State<MyTask> createState() => _MyTaskState();
-}
-
-class _MyTaskState extends State<MyTask> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
