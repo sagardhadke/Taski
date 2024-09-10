@@ -5,4 +5,3 @@ export 'package:taski/Auth/Sign Up.dart';
 
 export 'package:taski/Splash.dart';
 
-export 'package:taski/Screens/AddTasks.dart';
