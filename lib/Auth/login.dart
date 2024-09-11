@@ -88,7 +88,7 @@ class _MyLoginState extends State<MyLogin> {
                           borderRadius: BorderRadius.circular(10))),
                   onPressed: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => AddTasks()));
+                        MaterialPageRoute(builder: (context) => MyHome()));
                   },
                   child: Text(
                     "Login",

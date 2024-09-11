@@ -16,7 +16,6 @@ class AddyTasksState extends State<AddTasks> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             children: [
@@ -77,6 +76,11 @@ class AddyTasksState extends State<AddTasks> {
                           style: GoogleFonts.iceberg(
                               textStyle: TextStyle(
                                   fontSize: 21, fontWeight: FontWeight.bold)),
+                        ),
+                        Text(
+                          "Description : it's a description",
+                          style: GoogleFonts.iceberg(
+                              textStyle: TextStyle(fontSize: 21)),
                         )
                       ],
                     ),

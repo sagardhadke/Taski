@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:taski/Widget/AddTasks.dart';
+import 'package:taski/Widget/DummyTask.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -12,12 +14,19 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Taski",
+          style: GoogleFonts.robotoCondensed(
+              textStyle: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white)),
+        ),
+        backgroundColor: Colors.green,
+      ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          
-        ],
+        children: [SizedBox(height: 35), MyWidget()],
       ),
     );
   }
