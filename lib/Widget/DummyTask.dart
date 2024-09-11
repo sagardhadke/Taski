@@ -50,8 +50,9 @@ class MyWidget extends StatelessWidget {
           ),
         ]),
         child: Container(
+          margin: EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.greenAccent,
+            color: const Color(0xFFFFFFFF),
           ),
           height: 100,
           width: double.infinity,
