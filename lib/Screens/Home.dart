@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:taski/Widget/AddTasks.dart';
-import 'package:taski/Widget/DummyTask.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -26,9 +25,7 @@ class _MyHomeState extends State<MyHome> {
         ),
         backgroundColor: Colors.green,
       ),
-      body: Column(
-        children: [SizedBox(height: 35), MyWidget()],
-      ),
+      body: Column(children: [SizedBox(height: 35), AddTasks()]),
     );
   }
 }
