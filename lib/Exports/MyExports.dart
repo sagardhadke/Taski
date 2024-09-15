@@ -5,3 +5,5 @@ export 'package:taski/Auth/Sign Up.dart';
 
 export 'package:taski/Splash.dart';
 
+export 'package:provider/provider.dart';
+

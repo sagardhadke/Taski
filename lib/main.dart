@@ -1,3 +1,5 @@
+import 'package:taski/Controller/TaskController.dart';
+
 import 'Exports/MyExports.dart';
 
 void main() {
@@ -17,6 +19,12 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: MySplashScreen());
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (_) => Taskcontroller()),
+          ],
+          child: MySplashScreen(),
+          )
+    );
   }
 }
