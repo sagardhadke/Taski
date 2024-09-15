@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taski/Models/TaskModels.dart';
 
-
 class Taskcontroller extends ChangeNotifier {
 
   List <Taskmodels> _oftask = [
