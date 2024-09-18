@@ -1,4 +1,4 @@
 # Taski - ToDo App
-MVP architecture 
+MVP architecture, Provider, Lottie Animation 
 flutter base 
 Android iOS app
