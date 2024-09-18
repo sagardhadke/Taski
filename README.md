@@ -1,3 +1,2 @@
 # Taski - ToDo App
-
-A new Flutter project.
+Android iOS app
