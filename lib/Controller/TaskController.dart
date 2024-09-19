@@ -9,7 +9,10 @@ class Taskcontroller extends ChangeNotifier {
       descriptions: "this is description",
       date: "5/09/2024",
       time: "9:30 pm"
+      
     )
   ];
+
+  List <Taskmodels> get oftask => _oftask;
 
 }
