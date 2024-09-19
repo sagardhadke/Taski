@@ -7,3 +7,6 @@ export 'package:taski/Splash.dart';
 
 export 'package:provider/provider.dart';
 
+export 'package:taski/View/Home.dart';
+
+export 'package:google_fonts/google_fonts.dart';

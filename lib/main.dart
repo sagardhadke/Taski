@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (_) => Taskcontroller()),
-          ],
-          child: MySplashScreen(),
-          )
-    );
+            providers: [
+              ChangeNotifierProvider(create: (_) => Taskcontroller()),
+            ],
+            child: MySplashScreen(), 
+              
+            ));
   }
 }
