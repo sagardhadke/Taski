@@ -7,8 +7,8 @@ class Taskcontroller extends ChangeNotifier {
     Taskmodels(
       title: "this is 1st",
       descriptions: "this is description",
-      startTime: "5:30pm",
-      endTime: "9:30 pm"
+      date: "5/09/2024",
+      time: "9:30 pm"
     )
   ];
 

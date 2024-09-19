@@ -11,6 +11,44 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  List ofNotes = [
+    {
+      "title": "First Note",
+      "desc": "My First Note",
+      "date": "19-09-2024",
+      "time": "05:53 PM"
+    },
+    {
+      "title": "MVP Note",
+      "desc": "This app made with MVP",
+      "date": "20-10-2025",
+      "time": "15:50 AM"
+    },
+    {
+      "title": "Provider",
+      "desc": "Provider use in this app",
+      "date": "09-12-2030",
+      "time": "09:40 PM"
+    },
+    {
+      "title": "Animation Lottie",
+      "desc": "Lottie Files animation are used in this note app",
+      "date": "32-06-2014",
+      "time": "02:30 PM"
+    },
+    {
+      "title": "Widget Used in Notes app",
+      "desc": "All the widgets",
+      "date": "28-01-2029",
+      "time": "11:03 AM"
+    },
+    {
+      "title": "First Note",
+      "desc": "My First Note",
+      "date": "19-09-2024",
+      "time": "05:53 PM"
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,20 +76,9 @@ class _MyHomeState extends State<MyHome> {
         backgroundColor: Colors.green,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        SizedBox(height: 35),
-
-        // ExpansionTile(
-        //   title: Text("data"),
-        //   children: [
-        //     Text("data"),
-        //     Text("data"),
-        //     Text("data"),
-        //   ],
-        // ),
-        // Text("data")
         Expanded(
           child: ListView.builder(
-            itemCount: 15,
+            itemCount: ofNotes.length,
             itemBuilder: (context, index) {
               return Slidable(
                 endActionPane: ActionPane(
@@ -96,30 +123,36 @@ class _MyHomeState extends State<MyHome> {
                   ),
                 ]),
                 child: ExpansionTile(
-                  title: Text("data",
+                  title: Text("${ofNotes[index]["title"]}",
                       style:
                           TextStyle(fontSize: 21, fontWeight: FontWeight.bold)),
                   children: [
                     ListTile(
                       leading: Icon(
-                        Icons.circle_outlined,
+                        Icons.description_outlined,
                         color: Colors.green,
                       ),
-                      title: Text("First Note",
+                      title: Text("Description : ${ofNotes[index]["desc"]}",
+                          maxLines: 2,
                           style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold)),
-                    ),
-                    Text(
-                      "Description : it's a description",
-                      style: GoogleFonts.iceberg(
-                          textStyle: TextStyle(fontSize: 21)),
+                            fontSize: 21,
+                          )),
                     ),
                     ListTile(
                       leading: Icon(
                         Icons.date_range_outlined,
                         color: Colors.green,
                       ),
-                      title: Text("First Note", style: TextStyle(fontSize: 21)),
+                      title: Text("Date : ${ofNotes[index]["date"]}",
+                          style: TextStyle(fontSize: 21)),
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.access_time_outlined,
+                        color: Colors.green,
+                      ),
+                      title: Text("Time : ${ofNotes[index]["time"]}",
+                          style: TextStyle(fontSize: 21)),
                     ),
                   ],
                 ),

@@ -2,12 +2,12 @@ class Taskmodels {
 
   String? title;
   String? descriptions;
-  String? startTime;
-  String? endTime;
+  String? date;
+  String? time;
 
   Taskmodels({required this.title,
    required this.descriptions,
-    required this.startTime,
-  required this.endTime});
+    required this.date,
+  required this.time});
 
 }
