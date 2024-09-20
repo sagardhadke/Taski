@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:taski/Exports/MyExports.dart';
 
+import '../Controller/TaskController.dart';
+import '../Models/TaskModels.dart';
+
 class AddTodo extends StatefulWidget {
   const AddTodo({super.key});
 
@@ -53,6 +56,8 @@ class AddTodoState extends State<AddTodo> {
   @override
   Widget build(BuildContext context) {
     String displayTime = formatTime(_time);
+    // Access the provider
+    final taskController = Provider.of<Taskcontroller>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -92,6 +97,7 @@ class AddTodoState extends State<AddTodo> {
                     return null;
                   },
                   onChanged: (value) {
+                    title = value;
                     if (key.currentState!.validate()) {
                       setState(() {});
                     }
@@ -120,6 +126,7 @@ class AddTodoState extends State<AddTodo> {
                     return null;
                   },
                   onChanged: (value) {
+                    descriptions = value;
                     if (key.currentState!.validate()) {
                       setState(() {});
                     }
@@ -146,6 +153,7 @@ class AddTodoState extends State<AddTodo> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
+                      setState(() {});
                       return 'Please choose a date'; // Adjusted error message
                     }
                     return null; // Return null if the value is valid
@@ -205,9 +213,22 @@ class AddTodoState extends State<AddTodo> {
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
                     onPressed: () {
+                      print("Button pressed");
                       if (key.currentState!.validate()) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => MyHome()));
+                        if (title != null && descriptions != null) {
+                          final newTask = Taskmodels(
+                            title: title!,
+                            descriptions: descriptions!,
+                            date: _date.text,
+                            time: _timeCont.text,
+                          );
+                          Provider.of<Taskcontroller>(context, listen: false)
+                              .addTask(newTask);
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyHome()));
+                        } else {}
                       }
                     },
                     child: Text(
