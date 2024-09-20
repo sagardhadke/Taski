@@ -224,10 +224,12 @@ class AddTodoState extends State<AddTodo> {
                           );
                           Provider.of<Taskcontroller>(context, listen: false)
                               .addTask(newTask);
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MyHome()));
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(builder: (context) => MyHome()),
+                            (Route<dynamic> route) =>
+                                false, // Removes all previous routes
+                          );
                         } else {}
                       }
                     },
